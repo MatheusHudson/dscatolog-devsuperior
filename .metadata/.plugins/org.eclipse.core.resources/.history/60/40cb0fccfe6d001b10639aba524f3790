@@ -1,0 +1,5 @@
+package com.botcampdevmatheus.dscatalog.resources;
+
+public class CategoryResource {
+
+}
