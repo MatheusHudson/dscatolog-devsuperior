@@ -1,0 +1,5 @@
+package com.botcampdevmatheus.dscatalog.resources.exceptions;
+
+public class StandardError {
+
+}
