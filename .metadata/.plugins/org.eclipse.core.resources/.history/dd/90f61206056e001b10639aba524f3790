@@ -1,0 +1,15 @@
+package com.botcampdevmatheus.dscatalog.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.botcampdevmatheus.dscatalog.entities.Category;
+
+@Service
+public class CategoryService {
+	
+	public List<Category> findAll() {
+		
+	}
+}
