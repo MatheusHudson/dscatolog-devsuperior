@@ -1,0 +1,9 @@
+package com.botcampdevmatheus.dscatalog.dto;
+
+public class ProductDTO {
+
+	
+	public ProductDTO() {
+		
+	}
+}
