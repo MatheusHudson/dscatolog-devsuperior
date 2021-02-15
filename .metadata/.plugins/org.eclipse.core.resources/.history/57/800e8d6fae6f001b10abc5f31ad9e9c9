@@ -1,0 +1,5 @@
+package com.botcampdevmatheus.dscatalog.entities;
+
+public class Prodcut {
+
+}
