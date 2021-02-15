@@ -14,11 +14,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.botcampdevmatheus.dscatalog.dto.CategoryDTO;
 import com.botcampdevmatheus.dscatalog.dto.ProductDTO;
-import com.botcampdevmatheus.dscatalog.entities.Category;
 import com.botcampdevmatheus.dscatalog.entities.Product;
-import com.botcampdevmatheus.dscatalog.repositories.CategoryRepository;
 import com.botcampdevmatheus.dscatalog.repositories.ProductRepository;
 import com.botcampdevmatheus.dscatalog.services.exceptions.DatabaseException;
 import com.botcampdevmatheus.dscatalog.services.exceptions.ResourceNotFoundException;
@@ -28,9 +25,6 @@ public class ProductService {
 
 	@Autowired
 	private ProductRepository repository;
-	
-	@Autowired
-	private CategoryRepository categoryRepository; 
 
 	@Transactional(readOnly = true)
 	public Page<ProductDTO> findAllPaged(PageRequest pageRequest) {
@@ -78,14 +72,7 @@ public class ProductService {
 		entity.setPrice(dto.getPrice());
 		entity.setDescription(dto.getDescription());
 		entity.setImgUrl(dto.getImgUrl());
-		entity.setDate(dto.getDate());
-		
-		
-		entity.getCategories().clear();
-		for(CategoryDTO catDto : dto.getCategories()) {
-			Category category = categoryRepository.getOne(catDto.getId());
-			entity.getCategories().add(category);
-		}
+		entity.setDescription(dto.getDate());
 		
 		
 	}
